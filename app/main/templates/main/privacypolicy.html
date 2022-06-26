@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Bear's Privacy Policy</title>
-
-  <meta name="description"            content="the babbling of a coder and cat herder"/>
-  <meta name="author"                 content="bear"/>
-  <meta name="viewport"               content="width=device-width, initial-scale=1.0"/>
-  <meta name="mobile-web-app-capable" content="yes"/>
-
-  <link rel="feed"                   href="{{ config.BASE_URL }}/bearlog" type="text/html"/>
-  <link rel="webmention"             href="{{ config.BASE_URL }}/webmention"/>
-  <link rel="micropub"               href="{{ config.BASE_URL }}/micropub"/>
-  <link rel="token_endpoint"         href="{{ config.BASE_URL }}/token"/>
-  <link rel="authorization_endpoint" href="{{ config.BASE_URL }}/auth"/>
-  <link rel="hub"                    href="{{ config.BASE_URL }}/websubhub"/>
-  <link rel="self"                   href="{{ config.BASE_URL }}"/>
-
-  <link rel="manifest" href="/images/bear_manifest.json">
-  <link rel="shortcut icon"    sizes="128x128" href="/images/bear_128x128.jpg"/>
-  <link rel="apple-touch-icon" sizes="57x57"   href="/images/bear_apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60"   href="/images/bear_apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72"   href="/images/bear_apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76"   href="/images/bear_apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/bear_apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/bear_apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/bear_apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/bear_apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/bear_apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/bear_android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32"   href="/images/bear_favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96"   href="/images/bear_favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16"   href="/images/bear_favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/images/bear_ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <link href="/css/bear.css" rel="stylesheet"/>
-</head>
-<body>
+{% extends "main/root.jinja" %}
+{% block header %}
+<title>Bear's Privacy Policy</title>
+{% endblock %}
+{% block content %}
     <div id="header">
         <h2>Privacy Policy</h2>
     </div>
@@ -93,20 +57,4 @@
         <p><strong>Note</strong>: The above, heck some of it verbatim, was taken from the excellent work of 
             <a href="https://ascraeus.org/page/about/">Daniel Goldsmith</a>. All mistakes or errors are mine.</p>
     </div>
-    <hr/>
-    <footer>
-        <p>&copy; 2003-2022 by <a class="p-name" href="/">Mike Taylor</a></p>
-        <p><a xmlns:cc="//creativecommons.org/ns#"
-              property="cc:attributionName"
-              rel="cc:attributionURL"
-              href="//creativecommons.org/licenses/by-sa/3.0/us/">
-            <img src="//i.creativecommons.org/l/by-sa/3.0/us/88x31.png"
-                 alt="Creative Commons Attribution-ShareAlike 3.0 United States"/>
-            </a>
-            <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/us/">
-               Creative Commons Attribution-ShareAlike 3.0 United States
-            </a>
-        </p>
-    </footer>
-  </body>
-</html>
+{% endblock %}

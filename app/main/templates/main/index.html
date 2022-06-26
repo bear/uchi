@@ -1,0 +1,104 @@
+{% extends "main/root.jinja" %}
+{% block header %}
+<title>Bear</title>
+<link rel="token_endpoint"         href="{{ config.BASE_URL }}/token"/>
+<link rel="authorization_endpoint" href="{{ config.BASE_URL }}/auth"/>
+<link rel="webmention"             href="{{ config.BASE_URL }}/webmention"/>
+<link rel="micropub"               href="{{ config.BASE_URL }}/micropub"/>
+<link rel="hub"                    href="{{ config.BASE_URL }}/websubhub"/>
+<link rel="feed"                   href="{{ config.BASE_URL }}/bearlog" type="text/html"/>
+<link rel="self"                   href="{{ config.BASE_URL }}"/>
+{% endblock %}
+{% block content %}
+<div id="header">
+  <h2 id="quote-1">
+    The great way is very level and easy<br/>
+    but people love the by-ways<sup><a href="#footnote-1">1</a></sup>
+  </h2>
+</div>
+<div class="h-card">
+  <div id="content">
+    <p>Professional curmudgeon and Operations advocate.</p>
+    <p>
+      My current $dayjob is Senior Staff Engineer on the Engineering Operations team at
+      <a href="https://circleci.com">CircleCI</a>.
+    </p>
+    <p>
+      I was active with the <a href="http://xmpp.org">XMPP Software Foundation</a>
+      where I served on the Board of Directors from 2010 to 2014 and for 2016.
+    </p>
+    <p><a href="http://xmpp.org">XMPP</a>;
+        <a href="http://indiewebcamp.com">IndieWeb</a>;
+        Open [Social, Data, Source];
+        <a href="http://gazela.org/">Tall Ships</a>
+        and Cats</p>
+    <p>Python, Bash; Linux, macOS, Windows</p>
+    <h3>History</h3>
+    <p>2015 &dash; current: <a href="https://circleci.com">CircleCI</a></p>
+    <p>2012 &dash; 2015: &amp;yet - Operations Manager.</p>
+    <p>2010 &dash; 2012: Mozilla - Build/Release team.</p>
+    <p>2009 &dash; 2010: Seesmic - Operations.</p>
+    <p>2007 &dash; 2009: Open Source Applications Foundation - Build/Release.</p>
+    <p>1999 &dash; 2007: UT&amp;I Solutions - Systems Analyst, Senior Developer.</p>
+    <p>1996 &dash; 1999: Malvern Scale Data Systems - Senior Developer, Build/Release.</p>
+
+    <h3>GPG Key</h3>
+    <pre><code>
+<a href="pubkey.txt">0A93 9BA7 8203 FCBC 58A9  E8B5 9D1E 0661 8EE5 B4D8</a>
+sec 4096R/8EE5B4D8 2013-01-31
+uid                Mike Taylor (bear) &lt;bear@code-bear.com&gt;
+uid                Mike Taylor (bear) &lt;bear42@gmail.com&gt;
+uid                Mike Taylor (bear) &lt;bear@bear.im&gt;
+uid                Mike Taylor (bear) &lt;bear@circleci.com&gt;
+sub 4096R/9ADFA04F 2013-01-31
+    </code></pre>
+    <p>Expired GPG Key <a href="pubkey_old.txt">pubkey_old.txt</a> fingerprint 1E32 1FB3 8D83 57F6 BB5A  5CB9 777B BB86 AAA5 F23B</p>
+  </div>
+  <div id="menu">
+    <p>
+      <img class="u-photo" src="/images/bear_145x145.jpg" alt="photo of bear"/>
+    </p>
+    <p>
+      <a href="mailto:bear@bear.im" title="email: bear at bear.im" rel="me" class="u-email">
+        <img src="/images/email.gif" 
+            alt="mailto:bear@bear.im" style="border:0" />
+      </a>
+    </p>
+    <p>
+      <a href="https://bear.im" class="u-url u-uuid">
+        <img class="centered" src="/images/hcard.gif"
+            alt="Mike Taylor" title="Mike Taylor" style="border:0" />
+      </a>
+    </p>
+    <p>
+      <a href="xmpp://bear@bear.im" title="xmpp: bear at bear.im" rel="me" class="u-url">
+        <img class="centered" src="/images/xmpp-small.png"
+            alt="xmpp:bear@bear.im" style="border:0" />
+      </a>
+    </p>
+    <p><a href="/bearlog" rel="feed">the bearlog</a></p>
+    <p><a href="https://github.com/bear" rel="me" class="u-url">GitHub</a></p>
+    <p><a href="https://twitter.com/codebear" rel="me" class="u-url">@<span class="p-nickname">codebear</span></a></p>
+    <p>
+      <small>
+        <span class="p-nickname">bear</span> is located near
+        <span class="p-locality">Philadelphia</span> in the
+        <span class="p-country-name">United States</span>
+        <data class="p-tz" value="-0400">EDT</data>
+      </small>
+    </p>
+    <p>
+      <small>
+        <span class="p-x-pronoun-nominative">he</span> /
+        <span class="p-x-pronoun-oblique">him</span> /
+        <span class="p-x-pronoun-possessive">his</span>
+      </small>
+    </p>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+<div id="footnotes">
+  <p id="footnote-1"><small><strong><a href="/#quote-1">1</a></strong> From the <emphasis>Tao Te Ching</emphasis> by Lao Tzu.</small></p>
+</div>
+{% endblock %}

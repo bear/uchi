@@ -15,14 +15,14 @@ bp_main = Blueprint(
 def index():
     # db = get_db()
     # print(db.get("adp::poll::TUT::000999"))
-    return render_template("main/root.jinja")
+    return render_template("main/index.html")
 
 
 @bp_main.route("/privacypolicy")
 def privacypolicy():
     # db = get_db()
     # print(db.get("adp::poll::TUT::000999"))
-    return render_template("main/privacypolicy.jinja")
+    return render_template("main/privacypolicy.html")
 
 
 @bp_main.route("/presentations")
