@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-dotenv = "*"
+authlib = "*"
+six = "*"
+requests = "*"
+redis = "*"
+flask = "*"
+watchdog = "*"
+blinker = "*"
+Flask-DebugToolbar = "*"
+Flask-Script = "*"
+Flask-WTF = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.9"
