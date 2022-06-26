@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bear's Privacy Policy</title>
+
+  <meta name="description"            content="the babbling of a coder and cat herder"/>
+  <meta name="author"                 content="bear"/>
+  <meta name="viewport"               content="width=device-width, initial-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+
+  <link rel="feed"                   href="{{ config.BASE_URL }}/bearlog" type="text/html"/>
+  <link rel="webmention"             href="{{ config.BASE_URL }}/webmention"/>
+  <link rel="micropub"               href="{{ config.BASE_URL }}/micropub"/>
+  <link rel="token_endpoint"         href="{{ config.BASE_URL }}/token"/>
+  <link rel="authorization_endpoint" href="{{ config.BASE_URL }}/auth"/>
+  <link rel="hub"                    href="{{ config.BASE_URL }}/websubhub"/>
+  <link rel="self"                   href="{{ config.BASE_URL }}"/>
+
+  <link rel="manifest" href="/images/bear_manifest.json">
+  <link rel="shortcut icon"    sizes="128x128" href="/images/bear_128x128.jpg"/>
+  <link rel="apple-touch-icon" sizes="57x57"   href="/images/bear_apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60"   href="/images/bear_apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72"   href="/images/bear_apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76"   href="/images/bear_apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/bear_apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/bear_apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/bear_apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/bear_apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/bear_apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/bear_android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="/images/bear_favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96"   href="/images/bear_favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16"   href="/images/bear_favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/bear_ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="/css/bear.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="header">
+        <h2>Privacy Policy</h2>
+    </div>
+    <div id="content">
+        <div class="page-content">
+            <h3>Cookies and Tracking</h3>
+            <p>This site does not use cookies, nor does it attempt to fingerprint users in any way.</p>
+            <h3>Log files</h3>
+            <p>All logs are anonymized, using the following regex and log_format in nginx.conf</p>
+            <pre><code>
+    map $remote_addr $anon_remote_addr {
+        ~(?P<ip>\d+\.\d+)\.    $ip.0.0;
+        ~(?P<ip>[^:]+:[^:]+):  $ip::;
+        default 0.0.0.0;
+    }
+    log_format anonymous '$anon_remote_addr - $remote_user [$time_local] '
+                         '"$request" $status $body_bytes_sent '
+                         '"$http_user_agent"';
+            </code></pre>
+            <p>IP addresses in the logs will only show the first two bytes of an ipv4 address and the first two hextets of an ipv6 address’ Global Prefix. Additionally all log files are deleted after 10 days as suggested by the EFF’s DNT Guide.</p>
+            <h3>Data Transfer</h3>
+            <p>All data is served over the HTTPS protocol, encrypting all data between the browser and the server. Your network provider will still be able to see that you are downloading data from bear.im, but they will not be able to see the content.</p>
+            <h3>Do Not Track</h3>
+            <p>Because this site uses the LetsEncrypt Certificate Authority, which is itself DNT-compliant and does not log your browser checking the validity of this site’s HTTPS certificate.</p>
+            <h3>Analytics</h3>
+            <p>This site does not use any analytics at all.</p>
+            <h3>Referrer Header</h3>
+            <p>Nginx has been configured to set a Referrer Policy Header <pre><code>add_header Referrer-Policy "no-referrer";</code></pre></p>
+            <p>This means that any time you follow a link to an external site from this one, that external site does not know that you have arrived there from here. This is a simple improvement to privacy on the internet which is trivial to implement.</p>
+            <h3>Webmentions</h3>
+            <p>When you send a webmention to this site, you are explicitly providing metadata in your site’s markup, and this information is used to display your comment/reply on this site. This information consists of:</p>
+            <ul>
+                <li>Your name, or username</li>
+                <li>profile picture or avatar, if you have set one on your site</li>
+                <li>The url of your site, and the specific url of your comment/reply</li>
+                <li>content of your comment/reply</li>
+            </ul>
+            <p>All of this is information made public by you, and no information other than information you have made public can be captured by this process.</p>
+            <h3>Backfeed</h3>
+            <p>This site uses a backfeed mechanism in relation to posts on twitter, google+ and micro.blog. This means that if you respond or interact with a post on those services which originated on this site, those interactions are sent back to this site as a webmention (see above). As with webmentions, there is certain metadata which is sent and which is then used to display your interaction on this site. This information consists of:</p>
+            <ul>
+                <li>Your name, or username</li>
+                <li>A profile picture or avatar, if you have configured on on that service.</li>
+                <li>The url of your interaction</li>
+                <li>The content of your interaction, if applicable, e.g. the content of your tweet</li>
+            </ul>
+            <p>All of this is information made public by you in your use of those third-party services, and no information other than public information can be captured by this process.</p>
+            <h3>GDPR</h3>
+            <p>It is my position that all activity on this site is covered by the general exemption of Article 2 (2)© of the GDPR, and by the specific conception of inapplicability contained in Recital 18.2: Personal or household activities could include correspondence and the holding of addresses, or social networking and online activity undertaken within the context of such activities. This is a personal website, an attempt by me to maintain and control my online identity and presence outside the silos and walled gardens of avaricious corporate entities; there is no advertising here, no tracking, no cookies, no corporation.</p>
+            <p>That said, the principles of natural persons’ rights which underline the GDPR are good ones, and are to be welcomed. As a result, if you wish to obtain information about any data about you which this site might hold, then please make contact, and I shall make every attempt to assist you. Likewise, if you wish to have anything shown on this site, which you regard as personal information, deleted, then please make contact and I shall endeavour to assist you as much as possible. If you are a citizen of the European Union, then you are entitled to register a complaint with your national Data Protection Authority.</p>
+        </div>
+        <p><strong>Note</strong>: The above, heck some of it verbatim, was taken from the excellent work of 
+            <a href="https://ascraeus.org/page/about/">Daniel Goldsmith</a>. All mistakes or errors are mine.</p>
+    </div>
+    <hr/>
+    <footer>
+        <p>&copy; 2003-2022 by <a class="p-name" href="/">Mike Taylor</a></p>
+        <p><a xmlns:cc="//creativecommons.org/ns#"
+              property="cc:attributionName"
+              rel="cc:attributionURL"
+              href="//creativecommons.org/licenses/by-sa/3.0/us/">
+            <img src="//i.creativecommons.org/l/by-sa/3.0/us/88x31.png"
+                 alt="Creative Commons Attribution-ShareAlike 3.0 United States"/>
+            </a>
+            <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/us/">
+               Creative Commons Attribution-ShareAlike 3.0 United States
+            </a>
+        </p>
+    </footer>
+  </body>
+</html>

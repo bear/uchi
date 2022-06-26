@@ -1,0 +1,6 @@
+Author: Mike Taylor
+Contact: bear [at] bear [dot] im
+XMPP: xmpp://bear@bear.im
+Twitter: @codebear
+Location: Philadelphia, PA USA
+FOAF: http://bear.im/foaf.rdf

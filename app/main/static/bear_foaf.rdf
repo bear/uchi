@@ -1,0 +1,123 @@
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+  xmlns:air="http://www.daml.org/2001/10/html/airport-ont#"
+  xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rss="http://purl.org/rss/1.0/" 
+  xmlns:trust="http://www.perceive.net/schemas/20020725/trust#"
+  xmlns:web="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:wn="http://xmlns.com/wordnet/1.6/"
+  xmlns:pm="http://www.web-semantics.org/ns/pm#"
+  xmlns:wot="http://xmlns.com/wot/0.1/"
+>
+
+<foaf:Person>
+<foaf:name>Mike Taylor</foaf:name>
+<foaf:firstName>Mike</foaf:firstName>
+<foaf:surname>Taylor</foaf:surname>
+<foaf:nick>bear</foaf:nick>
+<foaf:homepage rdf:resource="https://bear.im"/>
+<foaf:phone rdf:resource="tel:+1-215.501.7809"/>
+<foaf:workplaceHomepage rdf:resource="http://circleci.com"/>
+</foaf:Person>
+
+  <Person rdf:ID="bear">
+    <name>Mike Taylor</name>
+    <title>Mr.</title>
+    <firstName>Mike</firstName>
+    <surname>Taylor</surname>
+    <nick>bear</nick>
+    <mbox_sha1sum rdf:resource="75f159a6ca4257f98cddf5a05f906cb18ced3775"/>
+    <mbox rdf:resource="mailto:bear@bear.im"/>
+    <jabberID>bear@bear.im</jabberID>
+    <jabberID>bear42@gmail.com</jabberID>
+    <msnChatID>bear@code-bear.com</msnChatID>
+    <weblog rdf:resource="https://bear.im/bearlog"/>
+    <homepage rdf:resource="https://bear.im"/>
+    <workplaceHomepage rdf:resource="http://circleci.com"/>
+    <workInfoHomepage rdf:resource="http://circleci.com"/>
+    <foaf:based_near>
+      <geo:Point>
+        <geo:lat>40.09</geo:lat>
+        <geo:long>-74.90</geo:long>
+      </geo:Point>
+    </foaf:based_near>
+    <contact:nearestAirport air:name="Philadelphia Intl" air:iataCode="PHL"
+                            air:location="Philadelphia, PA, USA"/>
+    <pubkeyAddress web:resource="https://bear.im/pubkey.txt"/>
+    <wot:hasKey>
+      <wot:PubKey>
+        <wot:fingerprint>1E32 1FB3 8D83 57F6 BB5A  5CB9 777B BB86 AAA5 F23B</wot:fingerprint>
+        <wot:hex_id>0x8EE5B4D8</wot:hex_id> 
+        <wot:pubkeyAddress>https://bear.im/pubkey.txt</wot:pubkeyAddress> 
+        <wot:length>4096"</wot:length>
+      </wot:PubKey>
+    </wot:hasKey>
+
+    <currentProject><doap:Project>
+      <pm:name>parsedatetime</pm:name>
+      <pm:homepage rdf:resource="http://github.com/bear/parsedatetime"/>
+    </doap:Project></currentProject>
+
+    <currentProject><doap:Project>
+      <pm:name>python-twitter</pm:name>
+      <pm:homepage rdf:resource="http://github.com/bear/python-twitter"/>
+    </doap:Project></currentProject>
+
+    <interest>
+      <rdf:Description rdf:about="http://nodejs.org">
+        <rdfs:label>NodeJS</rdfs:label>
+      </rdf:Description>
+    </interest>
+    <interest>
+      <rdf:Description rdf:about="http://hangops.com">
+        <rdfs:label>Dev/Ops</rdfs:label>
+      </rdf:Description>
+    </interest>
+    <interest>
+      <rdf:Description rdf:about="http://www.python.org">
+        <rdfs:label>Python</rdfs:label>
+      </rdf:Description>
+    </interest>
+    <interest>
+      <rdf:Description rdf:about="http://www.osafoundation.org">
+        <rdfs:label>Chandler</rdfs:label>
+      </rdf:Description>
+    </interest>
+
+  </Person>
+
+  <foaf:Organisation rdf:ID="&yet">
+    <foaf:name>&yet</foaf:name>
+    <foaf:title>inc</foaf:title>
+    <foaf:nick>andyet</foaf:nick>
+    <foaf:mbox rdf:resource="mailto:info@andyet.net"/>
+  </foaf:Organisation>
+
+  <foaf:Organisation rdf:ID="Mozilla">
+    <foaf:name>Mozilla</foaf:name>
+    <foaf:title>inc</foaf:title>
+    <foaf:nick>Mozilla</foaf:nick>
+    <foaf:mbox rdf:resource="mailto:info@mozilla.com"/>
+  </foaf:Organisation>
+
+  <foaf:Organisation rdf:ID="Seesmic">
+    <foaf:name>Seesmic</foaf:name>
+    <foaf:title>inc</foaf:title>
+    <foaf:nick>Seesmic</foaf:nick>
+    <foaf:mbox rdf:resource="mailto:info@seesmic.com"/>
+  </foaf:Organisation>
+
+  <foaf:Organisation rdf:ID="OSAF">
+    <foaf:name>Open Source Applications Foundation</foaf:name>
+    <foaf:title>inc</foaf:title>
+    <foaf:nick>OSAF</foaf:nick>
+    <foaf:mbox rdf:resource="mailto:info@osafoundation.org"/>
+  </foaf:Organisation>
+
+</rdf:RDF>
+
